@@ -4,7 +4,6 @@ const token = require('../libs/createToken');
 
 module.exports.register = async (ctx, next) => {
   const {email, displayName, password} = ctx.request.body;
-
   if (!email) ctx.throw(400, `{email: 'Ваш email обязателен'}`);
   if (!password) ctx.throw(400, `{email: 'Ваш password обязателен'}`);
   if (!displayName) ctx.throw(400, `{email: 'Ваш displayName обязателен'}`);
